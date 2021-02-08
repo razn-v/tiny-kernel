@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# CLion
+.idea/
+
+# Build folder and files
+build/
+*.bin
