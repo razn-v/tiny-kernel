@@ -1,10 +1,10 @@
 CC = i686-elf-gcc
 NASM = nasm
 
-CC_SOURCES = $(wildcard kernel/*.c)
-ASM_SOURCES = $(wildcard boot/*.asm kernel/*.asm)
+C_SOURCES = $(wildcard kernel/*.c drivers/*.c)
+ASM_SOURCES = $(wildcard boot/*.asm)
 
-OBJS = ${CC_SOURCES:.c=.o} ${ASM_SOURCES:.asm=.o}
+OBJS = ${C_SOURCES:.c=.o} ${ASM_SOURCES:.asm=.o}
 
 BUILD_DIR = build
 ISO_DIR = iso
