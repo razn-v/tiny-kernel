@@ -1,10 +1,12 @@
+#pragma once
+
 #define VIDEO_ADDRESS 0xb8000
 #define VGA_HEIGHT 25
 #define VGA_WIDTH 80
 
-void init_screen();
+void screen_init();
 
-void clear_screen();
+void screen_clear();
 
 void write_digit(int digit);
 

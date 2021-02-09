@@ -3,12 +3,12 @@
 
 unsigned short* video_mem = (unsigned short*) VIDEO_ADDRESS;
 
-void init_screen() {
-    clear_screen();
+void screen_init() {
+    screen_clear();
     set_cursor_pos(0);
 }
 
-void clear_screen() {
+void screen_clear() {
     for (int x = 0; x < VGA_WIDTH; x++) {
         for (int y = 0; y < VGA_HEIGHT; y++) {
             write_char('\0');
