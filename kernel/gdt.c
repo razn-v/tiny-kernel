@@ -1,7 +1,7 @@
 #include "gdt.h"
 
-static gdt_segment_t gdt_segments[3];
-static gdt_descriptor_t gdt_ptr;
+gdt_segment_t gdt_segments[3];
+gdt_descriptor_t gdt_ptr;
 
 void gdt_init() {
     gdt_ptr.size = sizeof(gdt_segment_t) * 3 - 1;
@@ -15,6 +15,8 @@ void gdt_init() {
 
     // Data segment
     gdt_set_segment(2, 0xffff, 0, 0, 0x92, 0b11001111, 0);
+
+    gdt_load();
 }
 
 void gdt_set_segment(int num, uint16_t limit_low, uint16_t base_low, uint8_t base_middle, uint8_t access,
