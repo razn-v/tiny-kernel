@@ -1,7 +1,7 @@
 CC = gcc -m32
 NASM = nasm
 
-C_SOURCES = $(wildcard kernel/*.c drivers/*.c)
+C_SOURCES = $(wildcard kernel/*.c drivers/*.c libc/*.c)
 ASM_SOURCES = $(wildcard boot/*.asm kernel/*.asm)
 
 OBJS = ${C_SOURCES:.c=.o} ${ASM_SOURCES:.asm=.o}

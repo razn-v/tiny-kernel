@@ -5,7 +5,7 @@ gdt_descriptor_t gdt_ptr;
 
 void gdt_init() {
     gdt_ptr.size = sizeof(gdt_segment_t) * 3 - 1;
-    gdt_ptr.address = (uint32_t) & gdt_segments;
+    gdt_ptr.address = (uint32_t) &gdt_segments;
 
     // Null segment
     gdt_set_segment(0, 0, 0, 0, 0, 0, 0);
