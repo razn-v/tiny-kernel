@@ -18,7 +18,4 @@ typedef struct {
 
 void gdt_init();
 
-void gdt_set_segment(int num, uint16_t limit_low, uint16_t base_low, uint8_t base_middle, uint8_t access,
-                     uint8_t flags, uint8_t base_high);
-
 extern void gdt_load();
