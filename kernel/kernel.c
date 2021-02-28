@@ -7,5 +7,6 @@ void kernel_main() {
     idt_init();
     screen_init();
 
-    asm volatile("int $0x5");
+    write_str("Tiny Kernel.\n");
+    write_str("A tiny kernel made in C for learning purposes.");
 }
