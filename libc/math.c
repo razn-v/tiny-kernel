@@ -1,3 +1,5 @@
+#include <libc/math.h>
+
 int ipow(int x, int y) {
     if (y == 0) {
         return 1;

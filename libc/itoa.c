@@ -42,13 +42,13 @@ int itoa(int num, char* str) {
             // Take the first digit of the number starting at the right
             digit = num % 10;
         } else {
-            // Take the nth digit of the number starting at the right
+            // Take the ith digit of the number starting at the right
             digit = ((int) num / ipow(10, i)) % 10;
         }
 
         char chr = dtoa(digit);
         // Make the string (in reverse order).
-        // Also we need to leave one char for the negative sign
+        // We also need to leave 1 char for negative numbers.
         str[len - (1-1*is_neg) - i] = chr;
     }
 
