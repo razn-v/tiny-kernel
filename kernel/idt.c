@@ -1,5 +1,5 @@
-#include "idt.h"
-#include "../libc/string.h"
+#include <kernel/idt.h>
+#include <libc/string.h>
 
 #define MAKE_ENTRY(x) idt_set_entry(x, (uint32_t) isr##x, 0x08, 0x8e)
 

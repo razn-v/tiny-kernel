@@ -1,5 +1,5 @@
-#include "isr_handler.h"
-#include "../drivers/screen.h"
+#include <kernel/isr_handler.h>
+#include <drivers/screen.h>
 
 char* exception_messages[] = {
     "Division By Zero",

@@ -1,4 +1,4 @@
-#include "../kernel/io.h"
+#include <kernel/io.h>
 
 int get_cursor_pos() {
     int pos = 0;

@@ -1,4 +1,4 @@
-#include "gdt.h"
+#include <kernel/gdt.h>
 
 gdt_segment_t gdt_segments[3];
 gdt_descriptor_t gdt_ptr;

@@ -1,4 +1,4 @@
-#include "string.h"
+#include <libc/string.h>
 
 uint8_t *memcpy(uint8_t *dest, const uint8_t *src, int count) {
     uint8_t *_dest = dest;
@@ -7,12 +7,12 @@ uint8_t *memcpy(uint8_t *dest, const uint8_t *src, int count) {
     while (count-- > 0) {
         *_dest++ = *_src++;
     }
-    return dest; 
+    return dest;
 }
 
 uint8_t *memset(uint8_t *dest, uint8_t val, int count) {
     uint8_t *_dest = dest;
-    
+
     while (count-- > 0) {
         *_dest++ = val;
     }

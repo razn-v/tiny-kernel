@@ -1,5 +1,5 @@
-#include "screen.h"
-#include "cursor.h"
+#include <drivers/screen.h>
+#include <drivers/cursor.h>
 
 unsigned short* video_mem = (unsigned short*) VIDEO_ADDRESS;
 
@@ -37,7 +37,7 @@ void scroll() {
         swap_line(y, y+1);
     }
 
-    y_pos -= 1;
+    y_pos--;
     set_cursor_pos(get_offset());
 }
 
